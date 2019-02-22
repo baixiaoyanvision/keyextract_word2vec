@@ -40,10 +40,8 @@ Deep Learning 实战之 word2vec.pdf   https://spaces.ac.cn/usr/uploads/2017/04/
 
 （1）运行get_vector.py读取样本源文件data.txt;
 
-（2）获得源文件的分词文件，即data_seg.txt，但是该文件没有经过去重以及去停用词；
+（2）获得源文件的分词文件，即data_result.txt，包括分词、去重、去停用词
 
-（3）运行fenci.py，加载自定义停用词表stopWord.txt，并对拼接的文本进行数据预处理操作，包括分词、去重、去停用词，形成列表存储在data_result.txt中；
+（3）运行train_word2vec.py，训练词向量模型，得到data.model以及data.vector
 
-（4）运行train_word2vec.py，训练词向量模型，得到data.model以及data.vector
-
-（5）运行www.py，读取测试文本test_data.txt，然后就可以提取出对应的关键词
+（4）运行www.py，读取测试文本test_data.txt，然后就可以提取出对应的关键词
