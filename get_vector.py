@@ -20,7 +20,12 @@
  while line:
      print("---processiong", lineNum, "article---")
      seg_list = jieba.cut(line, cut_all = False)
-     line_seg = ' '.join(seg_list)
+     line_seg = ''
+     for word in seg_list:
+         if word not in stopkey:
+            line_seg += word
+            line_seg += ' '
+     #line_seg = ' '.join(seg_list)
      target.writelines(line_seg)
      lineNum += 1
      line = f.readline()
